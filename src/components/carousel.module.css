@@ -1,0 +1,12 @@
+@media only screen and (max-width: 550px) {
+  .carImage {
+    height: 30vh;
+  }
+  .textslanted {
+    font-size: 20em;
+  }
+}
+
+.textslanted {
+  font-family: "Press Start 2P", cursive;
+}
