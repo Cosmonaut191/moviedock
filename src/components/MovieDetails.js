@@ -19,7 +19,6 @@ export default class RecipeDetails extends Component {
       const jsonData = await data.json();
       var yt = jsonData.videos.results[0].key;
       var img = jsonData.images.posters;
-      console.log(img);
       this.setState(() => {
         return { movie: jsonData, yt: yt, img: img };
       });
@@ -31,8 +30,8 @@ export default class RecipeDetails extends Component {
   render() {
     const { title, overview, tagline } = this.state.movie;
 
-    console.log(this.state.img);
-    console.log(this.state.yt);
+    // console.log(this.state.img);
+    // console.log(this.state.yt);
     // let im = this.state.img;
     return (
       <>

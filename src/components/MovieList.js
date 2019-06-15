@@ -15,7 +15,11 @@ export default class MovieList extends Component {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
         />
-        <PosterCarousel movies={movies} className="carausel" />
+        <PosterCarousel
+          movies={movies}
+          className="carausel"
+          handleDetails={this.props.handleDetails}
+        />
 
         <div className="container my-5">
           <div className="row">
@@ -24,7 +28,7 @@ export default class MovieList extends Component {
           <div className="row">
             {error ? (
               <div>
-                <h1 className="text-danger text-center">{error}</h1>
+                <h3 className="text-light ml-10 text-center">{error}</h3>
               </div>
             ) : (
               movies.map(movie => {

@@ -13,7 +13,14 @@ export default class PosterCarousel extends Component {
         <Carousel>
           {backdrop.map(movie => {
             return (
-              <Carousel.Item className={styles.carImage}>
+              <Carousel.Item
+                className={styles.carImage}
+                style={{ cursor: "pointer" }}
+                key={movie.id}
+                onClick={() => {
+                  this.props.handleDetails(false, movie.id);
+                }}
+              >
                 <img
                   className="d-block w-90 "
                   style={{ height: "60vh", width: "100%" }}

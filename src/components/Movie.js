@@ -5,7 +5,7 @@ import "../App.css";
 
 export default class Movie extends Component {
   render() {
-    const { poster_path, release_date, title } = this.props.movie;
+    const { poster_path, release_date, title, vote_average } = this.props.movie;
     const image_url = `https://image.tmdb.org/t/p/w1280/${poster_path}`;
     return (
       <>
@@ -28,11 +28,13 @@ export default class Movie extends Component {
               <h5>
                 <strong>{title}</strong>
               </h5>
+              <h6>
+                <strong>Rating:{vote_average}/10</strong>
+              </h6>
               <div className="text-dark text-slanted text-muted">
                 <h6>Release Date: {release_date}</h6>
               </div>
             </div>
-           
           </div>
         </div>
       </>

@@ -23,15 +23,15 @@ class App extends Component {
     try {
       const data = await fetch(this.state.url);
       const jsonData = await data.json();
-      // if (jsonData.results.length === 0) {
-      //   this.setState(() => {
-      //     return { error: "Sorry, No results found" };
-      //   });
-      // } else {
-      // console.log(jsonData);
-      this.setState(() => {
-        return { movies: jsonData.results };
-      });
+      if (jsonData.results.length === 0) {
+        this.setState(() => {
+          return { error: "SORRY!! NO RESULTS FOUND :(" };
+        });
+      } else {
+        this.setState(() => {
+          return { movies: jsonData.results };
+        });
+      }
     } catch (error) {
       console.log(error);
     }
@@ -71,7 +71,8 @@ class App extends Component {
           url: `https://api.themoviedb.org/3/search/movie?api_key=d4a045af8aa117cfcd54c91117217672&language=en-US&query=${
             this.state.search
           }&page=1&include_adult=false`,
-          search: ""
+          search: "",
+          error: ""
         };
       },
       () => {

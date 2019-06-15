@@ -29,7 +29,7 @@ export default class h1 extends Component {
               MOVIEdock
               <div>
                 {" "}
-                <i class="fas fa-film" />
+                <i className="fas fa-film" />
               </div>
               {/* <Icon
                 type="picture"
@@ -56,7 +56,7 @@ export default class h1 extends Component {
               onChange={handleChange}
             />
             <button
-              class="btn btn-outline-danger my-2 my-sm-0"
+              className="btn btn-outline-danger my-2 my-sm-0"
               style={{ borderRadius: 25 }}
               type="submit"
             >
