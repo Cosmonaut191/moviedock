@@ -1,7 +1,7 @@
 # Movie Dock
 
 ### About
-A movie search and discovery web app built with ###React.js that calls Moviedb API to get data that is filtered/sorted. The default or the cover page displays a list of popular Movies.
+A movie search and discovery web app built with React.js that calls Moviedb API to get data that is filtered/sorted. The default or the cover page displays a list of popular Movies.
 
 The carousel on top filters the search result and displays backdrops for the movies with a rating greater than 7. This selection is intended to be passed on to the user in future.React-Bootstrap component is used to implement the component.
 
