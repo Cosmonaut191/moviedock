@@ -16,6 +16,7 @@ export default class h1 extends Component {
           <div className="navbar-brand text-primary text-slanted">
             <div
               className={styles1.textslanted}
+              onClick={handleSubmit}
               style={{
                 color: "016FB9",
                 textShadow: "3px 2px black",
@@ -23,7 +24,8 @@ export default class h1 extends Component {
                 fontWeight: "bold",
                 text: "italics",
                 wordSpacing: -5,
-                fontStyle: "italic"
+                fontStyle: "italic",
+                cursor: "pointer"
               }}
             >
               MOVIEdock
