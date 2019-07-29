@@ -35,9 +35,6 @@ export default class RecipeDetails extends Component {
   render() {
     const { title, overview, tagline } = this.state.movie;
 
-    // console.log(this.state.img);
-    // console.log(this.state.yt);
-    // let im = this.state.img;
     return (
       <>
         <div className="container">
@@ -91,22 +88,6 @@ export default class RecipeDetails extends Component {
               <p className=" mt-4 text-light ">{overview}</p>
             </div>
           </div>
-          {/* <div className="row">
-            <div className="col-11 mx-auto col-md-6 col-lg-4 my-1">
-              {im.map(image => {
-                return (
-                  <div>
-                    <img
-                      src={`https://image.tmdb.org/t/p/w1280/${
-                        image.file_path
-                      }`}
-                      alt={title}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          </div> */}
         </div>
       </>
     );

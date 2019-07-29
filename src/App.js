@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-
-// import { Row, Col, Card, Icon } from "antd";
-
-// import { recipes } from "./tempList";
 import MovieDetails from "./components/MovieDetails";
 import MovieList from "./components/MovieList";
 

@@ -3,8 +3,6 @@ import MovieSearch from "./MovieSearch";
 import PosterCarousel from "./PosterCarousel";
 import Movie from "./Movie";
 
-// import { Button } from "antd";
-
 export default class MovieList extends Component {
   render() {
     const { movies, value, handleSubmit, handleChange, error } = this.props;

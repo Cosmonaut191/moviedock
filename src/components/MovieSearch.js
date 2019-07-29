@@ -30,21 +30,8 @@ export default class h1 extends Component {
             >
               MOVIEdock
               <div>
-                {" "}
                 <i className="fas fa-film" />
               </div>
-              {/* <Icon
-                type="picture"
-                theme="filled"
-                style={{
-                  color: "#00ace6",
-                  textShadow: "3px 2px white",
-                  fontSize: 50,
-                  fontWeight: "bold",
-                  paddingLeft: 20,
-                  paddingBottom: 20
-                }}
-              /> */}
             </div>
           </div>
           <form className="form-inline my-2 my-lg-0" onSubmit={handleSubmit}>

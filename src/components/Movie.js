@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import { Button, Card } from "antd";
-// const { Meta } = Card;
+
 import "../App.css";
 
 export default class Movie extends Component {
