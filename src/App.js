@@ -67,13 +67,21 @@ class App extends Component {
 
     this.setState(
       () => {
-        return {
-          url: `https://api.themoviedb.org/3/search/movie?api_key=d4a045af8aa117cfcd54c91117217672&language=en-US&query=${
-            this.state.search
-          }&page=1&include_adult=false`,
-          search: "",
-          error: ""
-        };
+        if (this.state.search) {
+          return {
+            url: `https://api.themoviedb.org/3/search/movie?api_key=d4a045af8aa117cfcd54c91117217672&language=en-US&query=${
+              this.state.search
+            }&page=1&include_adult=false`,
+            search: "",
+            error: ""
+          };
+        } else {
+          return {
+            url:
+              "https://api.themoviedb.org/3/movie/popular?api_key=d4a045af8aa117cfcd54c91117217672&language=en-US&page=1",
+            error: ""
+          };
+        }
       },
       () => {
         this.getMovies();

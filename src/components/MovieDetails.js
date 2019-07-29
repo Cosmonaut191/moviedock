@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import { Button } from "antd";
+import { Spinner } from "react-bootstrap";
 
 export default class RecipeDetails extends Component {
   state = {
     movie: [],
     yt: "",
-    img: ""
+    img: "",
+    loading: true
   };
 
+  hideSpinner = () => {
+    this.setState({ loading: false });
+  };
   async componentDidMount() {
     const id = this.props.id;
     const url = `
@@ -55,8 +60,13 @@ export default class RecipeDetails extends Component {
               Back to home
             </Button>
           </div>
-          <div className="row">
-            <div className="col-12 mx-auto col-md-6 my-3">
+          <div className="row ">
+            <div className="col-12 mx-auto col-md-6 my-3  text-center  ">
+              {this.state.loading ? (
+                <Spinner animation="border" variant="light" role="status">
+                  <span className="sr-only">Loading...</span>
+                </Spinner>
+              ) : null}
               <iframe
                 title={title}
                 width="100%"
@@ -68,6 +78,7 @@ export default class RecipeDetails extends Component {
                 webkitallowfullscreen="true"
                 mozallowfullscreen="true"
                 oallowfullscreen="true"
+                onLoad={this.hideSpinner}
                 msallowfullscreen="true"
               />
             </div>
