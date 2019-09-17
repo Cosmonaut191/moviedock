@@ -1,5 +1,7 @@
 # Movie Dock
 
+### Live Demo: http://moviedock.netlify.com
+
 ### About
 A movie search and discovery web app built with React.js that calls Moviedb API to get data that is filtered/sorted. The default or the cover page displays a list of popular Movies.
 
